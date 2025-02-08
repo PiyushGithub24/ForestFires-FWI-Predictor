@@ -5,8 +5,7 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import Ridge
 
-application=Flask(__name__)
-app=application
+app=Flask(__name__)
 
 
 #importing ridge regressor and standard scaler:
