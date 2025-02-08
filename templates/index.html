@@ -1,0 +1,140 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<body>
+    <div>
+        <h1>Welcome to the {{title}} page</h1>
+    </div>
+
+    
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algerian Forest Fires - FWI Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Algerian Forest Fires - FWI Prediction</h1>
+        <p>This model predicts the **Fire Weather Index (FWI)** based on various meteorological and forest-related features.</p>
+
+        <h2>Dataset Features & Measurements</h2>
+        <p>The table below provides details on each feature, its description, and its measurement unit.</p>
+        
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Description</th>
+                <th>Measured In</th>
+            </tr>
+            <tr>
+                <td>Temperature</td>
+                <td>Air temperature</td>
+                <td>°C (Celsius)</td>
+            </tr>
+            <tr>
+                <td>Relative Humidity (RH)</td>
+                <td>Moisture in the air</td>
+                <td>% (Percentage)</td>
+            </tr>
+            <tr>
+                <td>Wind Speed (Ws)</td>
+                <td>Speed of the wind</td>
+                <td>km/h (Kilometers per hour)</td>
+            </tr>
+            <tr>
+                <td>Rain</td>
+                <td>Amount of rainfall</td>
+                <td>mm (Millimeters)</td>
+            </tr>
+            <tr>
+                <td>FFMC</td>
+                <td>Fine Fuel Moisture Code (dryness of surface litter)</td>
+                <td>Scale (0–101)</td>
+            </tr>
+            <tr>
+                <td>DMC</td>
+                <td>Duff Moisture Code (moisture in medium-sized fuels)</td>
+                <td>Scale (0–150+)</td>
+            </tr>
+            <tr>
+                <td>ISI</td>
+                <td>Initial Spread Index (fire spread potential)</td>
+                <td>Scale (0–30+)</td>
+            </tr>
+            <tr>
+                <td>FWI</td>
+                <td>Fire Weather Index (final fire danger index)</td>
+                <td>Scale (0–50+)</td>
+            </tr>
+            <tr>
+                <td>Region</td>
+                <td>Bejaia or Sidi Bel-abbes</td>
+                <td>Categorical (1 or 2)</td>
+            </tr>
+            <tr>
+                <td>Classes</td>
+                <td>Fire occurrence</td>
+                <td>Categorical (Fire/No Fire)</td>
+            </tr>
+        </table>
+
+        <h2>Model Information</h2>
+        <p>We trained a **Machine Learning model** using Ridge Regression to predict FWI based on input features.</p>
+        <p>Evaluation Metrics:</p>
+        <ul>
+            <li>R² Score: **0.85**</li>
+            <li>Mean Absolute Error (MAE): **2.3**</li>
+            <li>Root Mean Squared Error (RMSE): **3.7**</li>
+        </ul>
+
+        <h2>Try Our Model</h2>
+        <p><a href="{{url_for('predict_datapoint')}}" target="_blank" >Enter Feature Values</a> to get a prediction.</p>
+    </div>
+
+</body>
+</html>
